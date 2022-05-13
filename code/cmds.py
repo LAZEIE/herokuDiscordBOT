@@ -18,7 +18,7 @@ class cmds(commands.Cog):
 #await = ?
     @commands.command()
     async def helps(self, ctx):
-        await ctx.send("we own these order:\n!add [number1] [number2]\n!sub [number1] [number2]\n!ping\n!pan\n!USSR\n!USSRExtreme\n!PS5"\!eval, delete_after=60.0)
+        await ctx.send("we own these order:\n!add [number1] [number2]\n!sub [number1] [number2]\n!ping\n!pan\n!USSR\n!USSRExtreme\n!PS5\n!eval", delete_after=60.0)
 #        await ctx.send("we own these order:\n")
 #        await ctx.send("!add [number1] [number2]")
 #        await ctx.send("!sub [number1] [number2]")
