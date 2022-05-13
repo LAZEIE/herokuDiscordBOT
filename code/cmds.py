@@ -43,7 +43,10 @@ class cmds(commands.Cog):
    
     @commands.command()
     async def eval(self, ctx, a: str):
-        await ctx.send(eval(a))
+        if len(str(eval(a))) > 1999:
+            await ctx.send("it's too many powah for ya")
+        else:
+            await ctx.send(eval(a))
    
     @commands.command()
     async def add(self, ctx, a: int, b: int):
