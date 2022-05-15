@@ -9,6 +9,10 @@ import json
 import time
 #This is use vanilla command.
 
+e =2.7182818284590452
+pi=3.1415926535897932
+deg=(2*pi)/360
+
 with open('url.json', 'r', encoding = 'utf8') as jfile:
     data = json.load(jfile)
 
