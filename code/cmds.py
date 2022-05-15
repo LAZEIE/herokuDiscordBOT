@@ -5,6 +5,7 @@ from sympy import limit, Symbol, sin, oo
 import random
 import os
 import math
+import cmath
 import json
 import time
 #This is use vanilla command.
