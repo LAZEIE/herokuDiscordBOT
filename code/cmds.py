@@ -1,7 +1,7 @@
 #輸入Discord用的函式庫
 import discord
 from discord.ext import commands
-from sympy import limit, Symbol, sin, oo
+from sympy import ln, limit, Symbol, sin, cos , tan, sinh, cosh, tanh, oo
 import random
 import os
 import math
@@ -12,7 +12,8 @@ import time
 
 e =2.7182818284590452
 pi=3.1415926535897932
-deg=(2*pi)/360
+def deg(x):
+    ((2*pi)/360)*(x)
 
 with open('url.json', 'r', encoding = 'utf8') as jfile:
     data = json.load(jfile)
