@@ -2,6 +2,7 @@
 import discord
 from discord.ext import commands
 from sympy import ln, limit, Symbol, sin, cos , tan, sinh, cosh, tanh, oo
+from ast import literal_eval
 import random
 import os
 import math
@@ -24,7 +25,7 @@ class cmds(commands.Cog):
 #await = ?
     @commands.command()
     async def helps(self, ctx):
-        await ctx.send("we own these order:\n!add [number1] [number2]\n!sub [number1] [number2]\n!ping\n!pan\n!USSR\n!USSRExtreme\n!PS5\n!eval", delete_after=60.0)
+        await ctx.send("we own these order:\n!add [number1] [number2]\n!sub [number1] [number2]\n!ping\n!pan\n!USSR\n!USSRExtreme\n!PS5\n!literal_eval", delete_after=60.0)
 #        await ctx.send("we own these order:\n")
 #        await ctx.send("!add [number1] [number2]")
 #        await ctx.send("!sub [number1] [number2]")
@@ -33,7 +34,7 @@ class cmds(commands.Cog):
 #        await ctx.send("!USSR")
 #        await ctx.send("!USSRExtreme")
 #        await ctx.send("!PS5")
-#        await ctx.send("!eval")
+#        await ctx.send("!literal_eval")
 
     @commands.command()
     async def HTC(self, ctx):
@@ -48,11 +49,11 @@ class cmds(commands.Cog):
         #async def limit(self, *, arg):
    
     @commands.command()
-    async def eval(self, ctx, a: str):
-        if len(str(eval(a))) > 1999:
+    async def literal_eval(self, ctx, a: str):
+        if len(str(literal_eval(a))) > 1999:
             await ctx.send("it's too many powah for ya")
         else:
-            await ctx.send(eval(a))
+            await ctx.send(literal_eval(a))
    
     @commands.command()
     async def add(self, ctx, a: int, b: int):
